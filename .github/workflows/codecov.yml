@@ -3,10 +3,6 @@ name: "dev"
 on:
   workflow_dispatch:
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.head_ref || github.ref }}
-  cancel-in-progress: true
-
 permissions:
   contents: read
 
